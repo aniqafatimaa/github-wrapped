@@ -2,10 +2,10 @@
 
 > Your year in code — beautifully visualized. Inspired by Spotify Wrapped.
 
-![GitHub Wrapped Preview](./preview.png)
+![GitHub Wrapped Preview](preview.png)
 
 ## 🚀 Live Demo
-[github-wrapped on Netlify](#) <!-- update this link after deploying -->
+[github-wrapped on Netlify](githubwrapped-aniqa.netlify.app) <!-- update this link after deploying -->
 
 ## ✨ Features
 
