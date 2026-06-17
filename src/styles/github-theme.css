@@ -1,0 +1,151 @@
+/* GitHub Color Palette & Design Tokens */
+:root {
+  /* Background layers - just like GitHub's dark theme */
+  --gh-bg-primary: #0d1117;
+  --gh-bg-secondary: #161b22;
+  --gh-bg-tertiary: #21262d;
+  --gh-bg-overlay: #30363d;
+
+  /* Borders */
+  --gh-border: #30363d;
+  --gh-border-muted: #21262d;
+
+  /* Text */
+  --gh-text-primary: #e6edf3;
+  --gh-text-secondary: #8b949e;
+  --gh-text-muted: #6e7681;
+  --gh-text-link: #58a6ff;
+
+  /* GitHub accent blue */
+  --gh-accent: #1f6feb;
+  --gh-accent-hover: #388bfd;
+  --gh-accent-subtle: #1f6feb26;
+
+  /* Contribution green (the famous GitHub green) */
+  --gh-green-1: #0e4429;
+  --gh-green-2: #006d32;
+  --gh-green-3: #26a641;
+  --gh-green-4: #39d353;
+
+  /* Language colors */
+  --gh-yellow: #e3b341;
+  --gh-orange: #f0883e;
+  --gh-red: #f85149;
+  --gh-purple: #bc8cff;
+  --gh-pink: #f778ba;
+  --gh-teal: #39c5cf;
+
+  /* Success / warning / danger */
+  --gh-success: #3fb950;
+  --gh-warning: #d29922;
+  --gh-danger: #f85149;
+
+  /* Typography */
+  --gh-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans',
+    Helvetica, Arial, sans-serif;
+  --gh-font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono',
+    Menlo, monospace;
+
+  /* Spacing */
+  --gh-radius: 6px;
+  --gh-radius-lg: 12px;
+
+  /* Shadows */
+  --gh-shadow: 0 0 0 1px var(--gh-border);
+  --gh-shadow-md: 0 3px 6px rgba(0,0,0,0.4);
+  --gh-shadow-lg: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+/* Global reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--gh-bg-primary);
+  color: var(--gh-text-primary);
+  font-family: var(--gh-font);
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Scrollbar - GitHub style */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--gh-bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--gh-bg-overlay); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gh-text-muted); }
+
+/* Reusable utility classes */
+.gh-card {
+  background: var(--gh-bg-secondary);
+  border: 1px solid var(--gh-border);
+  border-radius: var(--gh-radius);
+  padding: 16px;
+}
+
+.gh-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 16px;
+  background: var(--gh-bg-tertiary);
+  color: var(--gh-text-primary);
+  border: 1px solid var(--gh-border);
+  border-radius: var(--gh-radius);
+  font-family: var(--gh-font);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  text-decoration: none;
+}
+
+.gh-btn:hover {
+  background: var(--gh-bg-overlay);
+  border-color: var(--gh-text-secondary);
+}
+
+.gh-btn-primary {
+  background: var(--gh-accent);
+  border-color: var(--gh-accent);
+  color: #ffffff;
+}
+
+.gh-btn-primary:hover {
+  background: var(--gh-accent-hover);
+  border-color: var(--gh-accent-hover);
+}
+
+.gh-input {
+  width: 100%;
+  padding: 5px 12px;
+  background: var(--gh-bg-primary);
+  color: var(--gh-text-primary);
+  border: 1px solid var(--gh-border);
+  border-radius: var(--gh-radius);
+  font-family: var(--gh-font);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.gh-input:focus {
+  border-color: var(--gh-accent);
+  box-shadow: 0 0 0 3px var(--gh-accent-subtle);
+}
+
+.gh-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gh-text-primary);
+  margin-bottom: 6px;
+}
+
+.gh-text-muted {
+  color: var(--gh-text-secondary);
+  font-size: 12px;
+}
